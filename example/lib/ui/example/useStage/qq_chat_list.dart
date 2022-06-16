@@ -6,6 +6,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+
 import '../../../other/expanded_viewport.dart';
 
 /*
@@ -23,8 +24,7 @@ class QQChatList extends StatefulWidget {
   }
 }
 
-const String myUrl =
-    "https://avatars1.githubusercontent.com/u/19425362?s=400&u=1a30f9fdf71cc9a51e20729b2fa1410c710d0f2f&v=4";
+const String myUrl = "https://avatars1.githubusercontent.com/u/19425362?s=400&u=1a30f9fdf71cc9a51e20729b2fa1410c710d0f2f&v=4";
 
 class _QQChatListState extends State<QQChatList> {
   RefreshController _refreshController = RefreshController();
@@ -38,19 +38,16 @@ class _QQChatListState extends State<QQChatList> {
       url: myUrl,
     ),
     _MessageItem(
-      content:
-          "eem.....................................................................",
+      content: "eem.....................................................................",
       isMe: false,
       author: "对方",
-      url:
-          "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1718395925,3485808025&fm=27&gp=0.jpg",
+      url: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1718395925,3485808025&fm=27&gp=0.jpg",
     ),
     _MessageItem(
       content: "吃饭了没有?????????????",
       isMe: false,
       author: "对方",
-      url:
-          "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1718395925,3485808025&fm=27&gp=0.jpg",
+      url: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1718395925,3485808025&fm=27&gp=0.jpg",
     )
   ];
 
@@ -106,15 +103,10 @@ class _QQChatListState extends State<QQChatList> {
                         content: "...........",
                         isMe: false,
                         author: "对方",
-                        url:
-                            "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1718395925,3485808025&fm=27&gp=0.jpg",
+                        url: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1718395925,3485808025&fm=27&gp=0.jpg",
                       ));
                       data.add(_MessageItem(
-                          content: "吃饭了没有?????????????",
-                          isMe: false,
-                          author: "对方",
-                          url:
-                              "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1718395925,3485808025&fm=27&gp=0.jpg"));
+                          content: "吃饭了没有?????????????", isMe: false, author: "对方", url: "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1718395925,3485808025&fm=27&gp=0.jpg"));
                       setState(() {});
                       _refreshController.loadComplete();
                     },
@@ -145,9 +137,7 @@ class _QQChatListState extends State<QQChatList> {
                           slivers: <Widget>[
                             SliverExpanded(),
                             SliverList(
-                              delegate: SliverChildBuilderDelegate(
-                                  (c, i) => data[i],
-                                  childCount: data.length),
+                              delegate: SliverChildBuilderDelegate((c, i) => data[i], childCount: data.length),
                             )
                           ],
                         );
@@ -183,9 +173,9 @@ class _QQChatListState extends State<QQChatList> {
                           margin: EdgeInsets.all(10.0),
                         ),
                       ),
-                      RaisedButton(
+                      ElevatedButton(
                         child: Text("发送"),
-                        color: Colors.blueAccent,
+                        style: ElevatedButton.styleFrom(primary: Colors.blueAccent),
                         onPressed: () {
                           _scrollController.jumpTo(0.0);
                           data.insert(

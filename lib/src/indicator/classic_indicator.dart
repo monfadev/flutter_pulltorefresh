@@ -4,14 +4,12 @@
  *   createTime:2018-05-14 17:39
  */
 
-import 'package:flutter/material.dart'
-    hide RefreshIndicator, RefreshIndicatorState;
-import 'package:flutter/widgets.dart';
-import '../../pull_to_refresh.dart';
-import '../internals/indicator_wrap.dart';
-import '../smart_refresher.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart'
+    hide RefreshIndicator, RefreshIndicatorState;
+
+import '../../pull_to_refresh.dart';
 
 /// direction that icon should place to the text
 enum IconPosition { left, right, top, bottom }

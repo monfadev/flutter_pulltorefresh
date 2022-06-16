@@ -4,9 +4,9 @@
  * Time:  2019-07-23 21:09
  */
 import 'package:flutter/material.dart';
-import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 /*
    use refresh with StaggeredGridView or StickyHeader
@@ -32,12 +32,12 @@ class RefreshStaggeredAndStickyState extends State<RefreshStaggeredAndSticky>
   void _getDatas() {
     data.add(Row(
       children: <Widget>[
-        FlatButton(
+        TextButton(
             onPressed: () {
               _refreshController.requestRefresh();
             },
             child: Text("请求刷新")),
-        FlatButton(
+        TextButton(
             onPressed: () {
               _refreshController.requestLoading();
             },

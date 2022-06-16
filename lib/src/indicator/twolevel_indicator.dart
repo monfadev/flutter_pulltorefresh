@@ -5,10 +5,9 @@
  */
 
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
-import 'classic_indicator.dart';
+
 import '../smart_refresher.dart';
+import 'classic_indicator.dart';
 
 enum TwoLevelDisplayAlignment { fromTop, fromCenter, fromBottom }
 

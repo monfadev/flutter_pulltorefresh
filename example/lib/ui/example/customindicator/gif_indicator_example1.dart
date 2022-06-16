@@ -4,11 +4,10 @@
  * Time:  2019-07-26 18:22
  */
 
-import 'package:flutter/widgets.dart';
-import 'package:pull_to_refresh/pull_to_refresh.dart';
-import 'package:flutter_gifimage/flutter_gifimage.dart';
 import 'package:flutter/material.dart'
     hide RefreshIndicator, RefreshIndicatorState;
+import 'package:flutter_gifimage/flutter_gifimage.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 /*
   I use my plugin to implements gif effect,this plugin can help you to controll gif easily,
